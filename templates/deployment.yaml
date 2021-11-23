@@ -1,4 +1,4 @@
-{{- if not .Values.dockerconfigjson }}
+{{- if .Values.dockerconfigjson }}
 apiVersion: v1
 kind: Secret
 type: kubernetes.io/dockerconfigjson
