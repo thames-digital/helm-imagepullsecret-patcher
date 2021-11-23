@@ -1,12 +1,14 @@
+{{- if not .Values.dockerconfigjson }}
 apiVersion: v1
 kind: Secret
 type: kubernetes.io/dockerconfigjson
 metadata:
-  name: image-pull-secret-src
+  name: {{ .Values.secretName }}
   labels:
     {{- include "pullsecret-patcher.labels" . | nindent 4 }}
 data: 
   .dockerconfigjson: {{ .Values.dockerconfigjson }}
+{{- end}}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -53,4 +55,4 @@ spec:
       volumes:
         - name: src-dockerconfigjson
           secret: 
-            secretName: image-pull-secret-src
+            secretName: {{ .Values.secretName }}

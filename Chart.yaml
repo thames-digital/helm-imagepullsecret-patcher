@@ -4,8 +4,8 @@ description: A Helm chart for pullsecret-patcher
 type: application
 version: 0.1.0
 appVersion: "v0.14"
-home: https://github.com/DuckInCyber/imagepullsecret-patcher-Helm
+home: https://github.com/thames-digital/helm-imagepullsecret-patcher
 sources:
-  - https://github.com/DuckInCyber/imagepullsecret-patcher-Helm
+  - https://github.com/thames-digital/helm-imagepullsecret-patcher
 maintainers:
-  - name: DuckInCyber
+  - name: thames-digital
