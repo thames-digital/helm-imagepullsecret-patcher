@@ -46,6 +46,8 @@ spec:
               value: "true"
             - name: CONFIG_DOCKERCONFIGJSONPATH
               value: "/app/secrets/.dockerconfigjson"
+            - name: CONFIG_SECRETNAME
+              value: {{ .Values.secretName }}
           volumeMounts:
             - name: src-dockerconfigjson
               mountPath: "/app/secrets"
